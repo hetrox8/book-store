@@ -1,23 +1,18 @@
-import logo from './logo.svg';
+import React from 'react'; // Make sure to import React
 import './App.css';
+import { Routes, Route } from 'react-router-dom';
+import Book from './components/Books';
+import Navbar from './components/Navbar';
+import Categories from './components/Categories'; // Update component name to uppercase
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar />
+      <Routes>
+        <Route path='/' element={<Book />} />
+        <Route path='/categories' element={<Categories />} /> {/* Use uppercase component name */}
+      </Routes>
     </div>
   );
 }
