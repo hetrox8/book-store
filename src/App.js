@@ -10,8 +10,10 @@ function App() {
     <div className="App">
       <Navbar />
       <Routes>
-        <Route path='/' element={<Book />} />
-        <Route path='/categories' element={<Categories />} /> {/* Use uppercase component name */}
+        <Route path="/" element={<Book />} />
+        <Route path="/categories" element={<Categories />} />
+        {' '}
+        {/* Use uppercase component name */}
       </Routes>
     </div>
   );
