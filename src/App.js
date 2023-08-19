@@ -1,5 +1,4 @@
 import React from 'react'; // Make sure to import React
-import './App.css';
 import { Routes, Route } from 'react-router-dom';
 import Book from './components/Books';
 import Navbar from './components/Navbar';
