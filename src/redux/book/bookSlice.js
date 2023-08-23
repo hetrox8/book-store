@@ -4,7 +4,7 @@ const initialState = {
   books: [],
 };
 
-const booksSlice = createSlice({
+const BooksSlice = createSlice({
   name: 'books',
   initialState,
   reducers: {
@@ -17,5 +17,5 @@ const booksSlice = createSlice({
   },
 });
 
-export const { AddBook, RemoveBook } = booksSlice.actions;
-export default booksSlice.reducer;
+export const { AddBook, RemoveBook } = BiquadFilterNodeooksSlice.actions;
+export default BooksSlice.reducer;
