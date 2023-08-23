@@ -17,5 +17,5 @@ const BooksSlice = createSlice({
   },
 });
 
-export const { AddBook, RemoveBook } = BiquadFilterNodeooksSlice.actions;
+export const { AddBook, RemoveBook } = BooksSlice.actions;
 export default BooksSlice.reducer;
