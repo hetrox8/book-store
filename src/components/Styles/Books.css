@@ -1,11 +1,11 @@
-.all-b {
+.All-B {
   display: flex;
   flex-direction: column;
   height: 100vh;
   align-items: center;
 }
 
-.book-c {
+.Book-C {
   display: flex;
   flex-direction: column;
   padding: 4rem 1rem;
@@ -14,25 +14,25 @@
   gap: 2rem;
 }
 
-.single-b {
+.Single-B {
   background: #81c8dd4f;
   display: flex;
   gap: 2rem;
   border: 2px solid #6d263161;
   padding: 2rem 8rem;
-  border-radius: 20px;
+  border-radius: 20px 20px;
 }
 
-.remove-book,
-.add-book {
+.RemoveBook,
+.Add-Book {
   padding: 0.4rem 1.6rem;
   color: #fff;
   background-color: #cf6464a3;
   border: none;
-  border-radius: 20px;
+  border-radius: 20px 20px;
 }
 
-.book-f {
+.Book-F {
   display: flex;
   flex-direction: column;
   width: 50%;
@@ -50,7 +50,7 @@ form input {
   border: 2px solid #20ea9c;
 }
 
-.add-book {
+.AddBook {
   background-color: aqua;
   color: black;
 }
