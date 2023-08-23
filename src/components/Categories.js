@@ -1,9 +1,9 @@
 import './Styles/Category.css';
 
 const categories = () => (
-  <div className="CategoryContainer">
+  <div className="cat-container">
     <h1>Check your status</h1>
-    <button className="statusButton" type="button">Check Status</button>
+    <button className="status-button" type="button">Check Status</button>
   </div>
 );
 
