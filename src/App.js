@@ -13,7 +13,6 @@ function App() {
         <Route path="/" element={<Book />} />
         <Route path="/categories" element={<Categories />} />
         {' '}
-        {/* Use uppercase component name */}
       </Routes>
     </div>
   );
