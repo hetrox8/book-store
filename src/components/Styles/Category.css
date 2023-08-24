@@ -8,8 +8,11 @@
 }
 
 .status-button {
+  display: flex;
+  flex-direction: row;
   padding: 0.8rem 1.6rem;
   background-color: #48e262;
   border: none;
+  margin: auto;
   font-size: 22px;
 }
