@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { addBook } from '../redux/books/bookSlice';
-import './styles/Books.css';
+import { addBook } from '../redux/book/bookSlice';
+import './Styles/Books.css';
 
-const AddBook = () => {
+function AddBook() {
   const [title, setTitle] = useState('');
   const [author, setAuthor] = useState('');
   const dispatch = useDispatch();
@@ -53,6 +53,6 @@ const AddBook = () => {
       </form>
     </div>
   );
-};
+}
 
 export default AddBook;

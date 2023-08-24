@@ -8,7 +8,7 @@ import Categories from './components/Categories'; // Update component name to up
 
 function App() {
   return (
-      <Provider store={store}>  
+    <Provider store={store}>
       <Navbar />
       <Routes>
         <Route path="/" element={<Book />} />
@@ -16,7 +16,7 @@ function App() {
         {' '}
         {/* Use uppercase component name */}
       </Routes>
-    </Provider>  
+    </Provider>
   );
 }
 

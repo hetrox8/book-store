@@ -1,17 +1,16 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { useDispatch, useSelector } from 'react-redux';
-import { removeBook } from '../redux/books/bookSlice';
+import { removeBook } from '../redux/book/bookSlice';
 import './Styles/Books.css';
 
-const Book = () => {
+function Book() {
   const dispatch = useDispatch();
   const books = useSelector((state) => state.books.books);
 
   return (
-    <div className="BookCard">
+    <div className="Book-C">
       {books.map((item) => (
-        <div className="SingleBook" key={item.item_id}>
+        <div className="Single-B" key={item.item_id}>
           <h3>{item.title}</h3>
           <p>{item.author}</p>
           <p>{item.category}</p>
@@ -27,6 +26,6 @@ const Book = () => {
 
     </div>
   );
-};
+}
 
 export default Book;

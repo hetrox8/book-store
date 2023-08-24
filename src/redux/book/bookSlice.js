@@ -4,21 +4,21 @@ const initialState = {
   books: [
     {
       item_id: 'item1',
-      title: 'The Great Gatsby',
-      author: 'John Smith',
-      category: 'Fiction',
+      title: 'Laws of Human Nature',
+      author: 'Robert Greene',
+      category: 'Personal Development',
     },
     {
       item_id: 'item2',
-      title: 'Anna Karenina',
-      author: 'Leo Tolstoy',
-      category: 'Fiction',
+      title: 'Personal Development',
+      author: 'Jim Rohn',
+      category: 'Personal Development',
     },
     {
       item_id: 'item3',
-      title: 'The Selfish Gene',
-      author: 'Richard Dawkins',
-      category: 'Nonfiction',
+      title: '48 Laws of Power',
+      author: 'Robert Greene',
+      category: 'Personal  Development',
     },
   ],
 };
