@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { addBook } from '../redux/book/bookSlice';
-import './Styles/Books.css';
+import { addBookToApi, fetchData } from '../redux/books/bookSlice';
+import './styles/Books.css';
 
-function AddBook() {
+const AddBook = () => {
   const [title, setTitle] = useState('');
   const [author, setAuthor] = useState('');
   const dispatch = useDispatch();
@@ -25,7 +25,9 @@ function AddBook() {
         author,
         category: 'Some Category',
       };
-      dispatch(addBook(newBook));
+      dispatch(addBookToApi(newBook)).then(() => {
+        dispatch(fetchData());
+      });
       setTitle('');
       setAuthor('');
     }
@@ -53,6 +55,6 @@ function AddBook() {
       </form>
     </div>
   );
-}
+};
 
 export default AddBook;
