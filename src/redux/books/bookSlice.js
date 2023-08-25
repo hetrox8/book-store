@@ -35,7 +35,6 @@ const booksSlice = createSlice({
         state.books = action.payload || [];
       });
   },
-
 });
 
 export default booksSlice.reducer;
