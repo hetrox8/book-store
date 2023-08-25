@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { getStatus } from '../redux/categories/categoriesSlice';
 import './styles/Category.css';
 
-const Category = () => {
+function Category() {
   const dispatch = useDispatch();
 
   const handleCheckStatus = () => {
@@ -20,6 +20,6 @@ const Category = () => {
       </button>
     </div>
   );
-};
+}
 
 export default Category;

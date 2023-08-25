@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { deleteBook, fetchData } from '../redux/books/bookSlice';
+import { deleteBook, fetchData } from '../redux/book/bookSlice';
 import './styles/Books.css';
 
-const Book = () => {
+function Book() {
   const dispatch = useDispatch();
   const booksData = useSelector((state) => state.books.books);
 
@@ -39,6 +39,6 @@ const Book = () => {
 
     </div>
   );
-};
+}
 
 export default Book;

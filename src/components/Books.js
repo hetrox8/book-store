@@ -3,11 +3,13 @@ import Book from './Book';
 import AddBook from './AddBook';
 import './styles/Books.css';
 
-const Books = () => (
-  <div className="All-B">
-    <Book />
-    <AddBook />
-  </div>
-);
+function Books() {
+  return (
+    <div className="All-B">
+      <Book />
+      <AddBook />
+    </div>
+  );
+}
 
 export default Books;
