@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchData, deleteBook } from '../redux/books/bookSlice';
-
 import './styles/Books.css';
 
 function Book() {
@@ -37,7 +36,6 @@ function Book() {
           </button>
         </div>
       ))}
-
     </div>
   );
 }
