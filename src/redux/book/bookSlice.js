@@ -1,41 +1,40 @@
-import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
-import axios from 'axios';
+import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
-  books: [],
+  books: [
+    {
+      item_id: 'item1',
+      title: 'Laws of Human Nature',
+      author: 'Robert Greene',
+      category: 'Personal Development',
+    },
+    {
+      item_id: 'item2',
+      title: 'Personal Development',
+      author: 'Jim Rohn',
+      category: 'Personal Development',
+    },
+    {
+      item_id: 'item3',
+      title: '48 Laws of Power',
+      author: 'Robert Greene',
+      category: 'Personal  Development',
+    },
+  ],
 };
-
-export const fetchData = createAsyncThunk('books/fetchData', async () => {
-  const response = await axios.get('https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/XVPKLzU1Xn494BKaBvBq/books');
-  return response.data;
-});
-
-export const addBookToApi = createAsyncThunk('books/addBookToApi', async (newBookData) => {
-  const response = await axios.post(
-    'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/XVPKLzU1Xn494BKaBvBq/books',
-    newBookData,
-  );
-  return response.data;
-});
-
-export const deleteBook = createAsyncThunk('books/deleteBook', async (itemId) => {
-  const response = await axios.delete(
-    `https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/XVPKLzU1Xn494BKaBvBq/books/${itemId}`,
-  );
-  return response.data;
-});
 
 const booksSlice = createSlice({
   name: 'books',
   initialState,
-
-  extraReducers: (builder) => {
-    builder
-      .addCase(fetchData.fulfilled, (state, action) => {
-        state.books = action.payload || [];
-      });
+  reducers: {
+    addBook: (state, action) => {
+      state.books.push(action.payload);
+    },
+    removeBook: (state, action) => {
+      state.books = state.books.filter((book) => book.item_id !== action.payload);
+    },
   },
-
 });
 
+export const { addBook, removeBook } = booksSlice.actions;
 export default booksSlice.reducer;
