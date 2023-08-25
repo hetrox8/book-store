@@ -5,7 +5,7 @@ const initialState = {
   books: [],
 };
 
-export const FetchData = createAsyncThunk('books/fetchData', async () => {
+export const fetchData = createAsyncThunk('books/fetchData', async () => {
   const response = await axios.get('https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/XVPKLzU1Xn494BKaBvBq/books');
   return response.data;
 });
@@ -18,7 +18,7 @@ export const addBookToApi = createAsyncThunk('books/addBookToApi', async (newBoo
   return response.data;
 });
 
-export const DeleteBook = createAsyncThunk('books/deleteBook', async (itemId) => {
+export const deleteBook = createAsyncThunk('books/deleteBook', async (itemId) => {
   const response = await axios.delete(
     `https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/XVPKLzU1Xn494BKaBvBq/books/${itemId}`,
   );
