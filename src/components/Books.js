@@ -1,15 +1,13 @@
 import React from 'react';
 import Book from './Book';
 import AddBook from './AddBook';
-import './Styles/Books.css';
+import './styles/Books.css';
 
-function Books() {
-  return (
-    <div className="All-B">
-      <Book />
-      <AddBook />
-    </div>
-  );
-}
+const Books = () => (
+  <div className="AllBooks">
+    <Book />
+    <AddBook />
+  </div>
+);
 
 export default Books;
