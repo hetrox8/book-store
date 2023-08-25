@@ -1,35 +1,29 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
-<<<<<<< HEAD
-  status: [],
-=======
-  books: [],
->>>>>>> parent of f4709e6 (fix review changes)
+  books: [
+    {
+      id: 1,
+      title: '48 Laws of Power',
+      author: 'Robert Greene',
+      category: 'Personal Development',
+    },
+    {
+      id: 2,
+      title: 'Personal Development',
+      author: 'Jim Rohn',
+      category: 'Personal Development',
+    },
+  ],
 };
 
-const BooksSlice = createSlice({
-  name: 'books',
+const categoriesSlice = createSlice({
+  name: 'categories',
   initialState,
   reducers: {
-<<<<<<< HEAD
-    getStatus: (state, action) => {
-      state.status = !action.payload ? ['Under construction'] : [];
-=======
-    addBook: (state, action) => {
-      state.books.push(action.payload);
-    },
-    removeBook: (state, action) => {
-      state.books = state.books.filter((book) => book.id !== action.payload);
->>>>>>> parent of f4709e6 (fix review changes)
-    },
+    checkStatus: () => 'Under construction',
   },
 });
 
-<<<<<<< HEAD
-export const { getStatus } = categoriesSlice.actions;
+export const { checkStatus } = categoriesSlice.actions;
 export default categoriesSlice.reducer;
-=======
-export const { addBook, removeBook } = BooksSlice.actions;
-export default BooksSlice.reducer;
->>>>>>> parent of f4709e6 (fix review changes)
