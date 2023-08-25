@@ -1,22 +1,45 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import './Styles/Books.css';
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { fetchData, deleteBook } from '../redux/book';
 
-function Book({ title, category, author }) {
+import './styles/Books.css';
+
+function Book() {
+  const dispatch = useDispatch();
+  const booksData = useSelector((state) => state.books.books);
+
+  useEffect(() => {
+    dispatch(fetchData());
+  }, [dispatch]);
+
+  const books = Object.entries(booksData).flatMap(
+    ([key, value]) => value.map((item) => ({ ...item, id: key })),
+  );
+
+  async function handleDelete(id) {
+    await dispatch(deleteBook(id));
+    dispatch(fetchData());
+  }
+
   return (
-    <div className="Single-B">
-      <h3>{title}</h3>
-      <p>{author}</p>
-      <p>{category}</p>
-      <button className="RemoveBook" type="button">Remove</button>
+    <div className="Book-C">
+      {books.map((item) => (
+        <div className="Single-B" key={item.id}>
+          <h3>{item.title}</h3>
+          <p>{item.author}</p>
+          <p>{item.category}</p>
+          <button
+            className="RemoveBook"
+            type="button"
+            onClick={() => handleDelete(item.id)}
+          >
+            Remove
+          </button>
+        </div>
+      ))}
+
     </div>
   );
 }
-
-Book.propTypes = {
-  title: PropTypes.string.isRequired,
-  author: PropTypes.string.isRequired,
-  category: PropTypes.string.isRequired,
-};
 
 export default Book;
