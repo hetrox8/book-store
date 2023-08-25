@@ -4,34 +4,7 @@ import { addBookToApi, fetchData } from '../redux/books/bookSlice';
 import './styles/Books.css';
 
 function AddBook() {
-  const [title, setTitle] = useState('');
-  const [author, setAuthor] = useState('');
-  const dispatch = useDispatch();
-
-  const handleTitleChange = (e) => {
-    setTitle(e.target.value);
-  };
-
-  const handleAuthorChange = (e) => {
-    setAuthor(e.target.value);
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (title && author) {
-      const newBook = {
-        item_id: Date.now(),
-        title,
-        author,
-        category: 'Some Category',
-      };
-      dispatch(addBookToApi(newBook)).then(() => {
-        dispatch(fetchData());
-      });
-      setTitle('');
-      setAuthor('');
-    }
-  };
+  // ... (rest of your component code)
 
   return (
     <div className="BookForm">
@@ -58,3 +31,5 @@ function AddBook() {
 }
 
 export default AddBook;
+
+// Newline at the end of the file
