@@ -1,9 +1,9 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getStatus } from '../redux/categories/categoriesSlice';
-import './Styles/Category.css';
+import './styles/Category.css';
 
-function Category() {
+const Category = () => {
   const dispatch = useDispatch();
 
   const handleCheckStatus = () => {
@@ -13,13 +13,13 @@ function Category() {
   const status = useSelector((state) => state.categories.status);
 
   return (
-    <div className="Cat-container">
+    <div className="CategoryContainer">
       <h1>{status}</h1>
-      <button className="status-button" type="button" onClick={handleCheckStatus}>
+      <button className="statusButton" type="button" onClick={handleCheckStatus}>
         Check Status
       </button>
     </div>
   );
-}
+};
 
 export default Category;
