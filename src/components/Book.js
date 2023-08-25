@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchData, deleteBook } from '../redux/book/bookSlice.js';
+import { fetchData, deleteBook } from '../redux/books/bookSlice';
 
 import './styles/Books.css';
 

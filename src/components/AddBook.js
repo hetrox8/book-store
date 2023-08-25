@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { addBook } from '../redux/book/bookSlice';
+import { addBook } from '../redux/books/bookSlice';
 import './Styles/Books.css';
 
 function AddBook() {
