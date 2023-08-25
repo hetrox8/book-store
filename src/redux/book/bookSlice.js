@@ -4,18 +4,18 @@ const initialState = {
   books: [],
 };
 
-const booksSlice = createSlice({
+const BooksSlice = createSlice({
   name: 'books',
   initialState,
   reducers: {
-    addBook: (state, action) => {
+    AddBook: (state, action) => {
       state.books.push(action.payload);
     },
-    removeBook: (state, action) => {
+    RemoveBook: (state, action) => {
       state.books = state.books.filter((book) => book.id !== action.payload);
     },
   },
 });
 
-export const { addBook, removeBook } = booksSlice.actions;
-export default booksSlice.reducer;
+export const { AddBook, RemoveBook } = BooksSlice.actions;
+export default BooksSlice.reducer;
