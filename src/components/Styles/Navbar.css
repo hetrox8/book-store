@@ -6,7 +6,7 @@
   align-items: center;
 }
 
- .category-li {
+.category-li {
   color: #e8e8e8;
 }
 
@@ -32,11 +32,11 @@
 }
 
 .book-store {
-    font-size: 1.875rem;
-    color: #0290ff;
-    font-family: Montserrat, sans-serif;
-    margin-right: 2.375rem;
-    cursor: pointer;
+  font-size: 1.875rem;
+  color: #0290ff;
+  font-family: Montserrat, sans-serif;
+  margin-right: 2.375rem;
+  cursor: pointer;
 }
 
 .profile-container {
