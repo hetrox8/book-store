@@ -1,7 +1,7 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getStatus } from '../redux/categories/categoriesSlice';
-import './styles/Category.css';
+import './Styles/Category.css';
 
 function Category() {
   const dispatch = useDispatch();

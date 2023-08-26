@@ -1,4 +1,4 @@
-.cat-container {
+.CategoryContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -7,12 +7,17 @@
   gap: 2rem;
 }
 
-.status-button {
-  display: flex;
-  flex-direction: row;
-  padding: 0.8rem 1.6rem;
-  background-color: #48e262;
+.statusButton {
+  padding: 1rem 2rem;
+  border-radius: 3px;
+  background-color: #0290ff;
+  font-size: 0.813rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.5px;
+  text-align: center;
+  color: #fff;
   border: none;
-  margin: auto;
-  font-size: 22px;
 }

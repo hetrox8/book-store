@@ -1,12 +1,13 @@
 import React from 'react';
 import Book from './Book';
 import AddBook from './AddBook';
-import './styles/Books.css';
+import './Styles/Books.css';
 
 function Books() {
   return (
-    <div className="All-B">
+    <div className="AllBooks">
       <Book />
+      <div className="ThirdLine" />
       <AddBook />
     </div>
   );
