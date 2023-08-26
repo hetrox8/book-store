@@ -24,37 +24,37 @@ function Book() {
   }
 
   return (
-    <div className="BookCard">
+    <div className="book-card">
       {books.map((item) => {
         const randomProgress = Math.floor(Math.random() * 101);
         return (
-          <div className="SingleBook" key={item.id}>
-            <div className="bookDetailsContainer">
+          <div className="single-book" key={item.id}>
+            <div className="book-details-container">
               <div className="details">
                 <p className="category">{item.category}</p>
                 <h3 className="title">{item.title}</h3>
                 <p className="author">{item.author}</p>
               </div>
-              <div className="buttonContainer">
+              <div className="button-container">
                 <p>comments</p>
                 <div className="Line" />
-                <button type="button" className="removeButton" onClick={() => handleDelete(item.id)}>
+                <button type="button" className="remove-button" onClick={() => handleDelete(item.id)}>
                   Remove
                 </button>
-                <div className="Line" />
+                <div className="line" />
                 <p>edit</p>
               </div>
             </div>
-            <div className="progressBarContainer">
+            <div className="progress-bar-container">
               <CircularProgressbar
-                className="progressResult"
+                className="progress-result"
                 value={randomProgress}
                 styles={buildStyles({
                   textColor: '#000',
                   trailColor: '#d6d6d6',
                 })}
               />
-              <div className="progressBar">
+              <div className="progress-bar">
                 <p className="percent">
                   {randomProgress}
                   %
@@ -64,8 +64,8 @@ function Book() {
             </div>
             <div className="SecondLine" />
             <div className="chapter">
-              <p className="currentChapter">Current Chapter</p>
-              <p className="chapterNumber">Chapter 17</p>
+              <p className="current-chapter">Current Chapter</p>
+              <p className="chapter-number">Chapter 17</p>
               <button type="submit">Update Progress</button>
             </div>
           </div>
