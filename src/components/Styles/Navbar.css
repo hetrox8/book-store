@@ -11,7 +11,7 @@
 }
 
 .navbar ul {
-  font-family: 'Montserrat', sans-serif;
+  font-family: Montserrat, sans-serif;
   display: flex;
   list-style-type: none;
   text-align: center;
@@ -34,9 +34,9 @@
 .book-store {
     font-size: 1.875rem;
     color: #0290ff;
-    font-family: 'Montserrat', sans-serif;
+    font-family: Montserrat, sans-serif;
     margin-right: 2.375rem;
-    cursor: pointer;
+    cursor: pointer;
 }
 
 .profile-container {

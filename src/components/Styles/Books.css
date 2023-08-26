@@ -208,7 +208,7 @@ a::after {
   padding-bottom: 22%;
 }
 
-button.AddBook {
+button.add-book {
   background: #0290ff;
   border: none;
   border-radius: 4px;
@@ -280,7 +280,7 @@ select.category-list {
 
 
 
-#CircularProgressbar {
+#circular-progressbar {
   width: 100%;
   vertical-align: middle;
 }
