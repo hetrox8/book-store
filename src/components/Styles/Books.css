@@ -1,6 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;500&display=swap');
 
+*,
+*::before,
+a::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 .all-books {
   display: flex;
   flex-direction: column;
@@ -50,7 +58,7 @@
   font-style: normal;
   line-height: normal;
   letter-spacing: normal;
-  color: #121212;
+  color: #e8e8e8;
 }
 
 .title {
@@ -97,7 +105,7 @@
 
 .progress-bar-container {
   display: flex;
-  gap: 2rem;
+  gap: 1rem;
   align-items: center;
 }
 
@@ -195,8 +203,15 @@
 .book-form {
   display: flex;
   flex-direction: column;
-  max-width: 70%;
+  width: 75%;
   gap: 1rem;
+  padding-bottom: 22%;
+}
+
+button.AddBook {
+  background: #0290ff;
+  border: none;
+  border-radius: 4px;
 }
 
 .book-title {
@@ -250,6 +265,22 @@ form input::placeholder {
 }
 
 .third-line {
-  width: 70%;
+  border: solid 2px #e8e8e8;
+    width: 74%;
+    height: 0.125rem;
+}
+
+h3.book-title {
+  text-transform: uppercase;
+}
+
+select.category-list {
   border: solid 1px #e8e8e8;
+}
+
+
+
+#CircularProgressbar {
+  width: 100%;
+  vertical-align: middle;
 }

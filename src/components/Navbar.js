@@ -5,15 +5,18 @@ import './Styles/Navbar.css';
 function Navbar() {
   return (
     <nav className="navbar">
-      <h1>BookStore</h1>
+      <h1 className="book-store">BookStore</h1>
       <ul>
-        <li>
+        <li className="link">
           <Link to="/">Books</Link>
         </li>
-        <li>
-          <Link to="/Categories">Categories</Link>
+        <li className="link">
+          <Link className="category-li" to="/Categories">Categories</Link>
         </li>
       </ul>
+      <div className="profile-container">
+        <img src="https://img.icons8.com/ios-filled/0290ff/20/user.png" alt="user" />
+      </div>
     </nav>
   );
 }

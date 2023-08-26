@@ -34,8 +34,8 @@ function AddBook() {
   };
 
   return (
-    <div className="BookForm">
-      <h3 className="bookTitle">Add New Book</h3>
+    <div className="book-form">
+      <h3 className="book-title">Add New Book</h3>
       <form onSubmit={handleSubmit}>
         <input
           type="text"
@@ -43,7 +43,7 @@ function AddBook() {
           value={title}
           onChange={handleTitleChange}
         />
-        <select className="CategoryList" value={category} onChange={handleCategoryChange}>
+        <select className="category-list" value={category} onChange={handleCategoryChange}>
           <option value="Category">Category</option>
           <option value="fictional">Fictional</option>
           <option value="horror">Horror</option>

@@ -37,7 +37,7 @@ function Book() {
               </div>
               <div className="button-container">
                 <p>comments</p>
-                <div className="Line" />
+                <div className="line" />
                 <button type="button" className="remove-button" onClick={() => handleDelete(item.id)}>
                   Remove
                 </button>
@@ -62,7 +62,7 @@ function Book() {
                 <p className="text">completed</p>
               </div>
             </div>
-            <div className="SecondLine" />
+            <div className="second-line" />
             <div className="chapter">
               <p className="current-chapter">Current Chapter</p>
               <p className="chapter-number">Chapter 17</p>
