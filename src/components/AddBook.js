@@ -1,39 +1,41 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { addBook } from '../redux/book/bookSlice';
+import { addBookToApi, fetchData } from '../redux/books/bookSlice';
 import './Styles/Books.css';
 
 function AddBook() {
   const [title, setTitle] = useState('');
-  const [author, setAuthor] = useState('');
+  const [category, setCategory] = useState('Category');
   const dispatch = useDispatch();
 
   const handleTitleChange = (e) => {
     setTitle(e.target.value);
   };
 
-  const handleAuthorChange = (e) => {
-    setAuthor(e.target.value);
+  const handleCategoryChange = (e) => {
+    setCategory(e.target.value);
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (title && author) {
+    if (title && category) {
       const newBook = {
         item_id: Date.now(),
+        author: 'J.K Rolling',
         title,
-        author,
-        category: 'Some Category',
+        category,
       };
-      dispatch(addBook(newBook));
+      dispatch(addBookToApi(newBook)).then(() => {
+        dispatch(fetchData());
+      });
       setTitle('');
-      setAuthor('');
+      setCategory('Category');
     }
   };
 
   return (
-    <div className="BookForm">
-      <h3>Add New Book</h3>
+    <div className="book-form">
+      <h3 className="book-title">Add New Book</h3>
       <form onSubmit={handleSubmit}>
         <input
           type="text"
@@ -41,13 +43,13 @@ function AddBook() {
           value={title}
           onChange={handleTitleChange}
         />
-        <input
-          type="text"
-          placeholder="Enter Author Name"
-          value={author}
-          onChange={handleAuthorChange}
-        />
-        <button className="AddBook" type="submit">
+        <select className="category-list" value={category} onChange={handleCategoryChange}>
+          <option value="Category">Category</option>
+          <option value="fictional">Fictional</option>
+          <option value="horror">Horror</option>
+          <option value="adventure">Adventure</option>
+        </select>
+        <button className="add-book" type="submit">
           Add Book
         </button>
       </form>

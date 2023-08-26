@@ -3,12 +3,27 @@
   justify-content: space-between;
   padding: 1rem 3rem;
   box-shadow: 0 4px 4px rgb(0 0 0 / 10%);
+  align-items: center;
+}
+
+.link {
+  color: #121212;
+}
+
+.link-2 {
+  color: #dadce1;
+  font-family: Montserrat, sans-serif;
+  font-size: 0.813rem;
 }
 
 .navbar ul {
+  font-family: Montserrat, sans-serif;
   display: flex;
   list-style-type: none;
+  text-align: center;
   gap: 2rem;
+  justify-content: center;
+  align-items: center;
 }
 
 .navbar ul li {
@@ -18,5 +33,22 @@
 
 .navbar ul li a {
   text-decoration: none;
-  color: black;
+  font-size: 1rem;
+}
+
+.book-store {
+  font-size: 1.875rem;
+  color: #0290ff;
+  font-family: Montserrat, sans-serif;
+  margin-right: 2.375rem;
+  cursor: pointer;
+}
+
+.profile-container {
+  border: 1px solid #e8e8e8;
+  padding: 0.875rem;
+  border-radius: 100%;
+  cursor: pointer;
+  margin-left: auto;
+  height: 50px;
 }

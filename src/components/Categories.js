@@ -13,9 +13,9 @@ function Category() {
   const status = useSelector((state) => state.categories.status);
 
   return (
-    <div className="Cat-container">
+    <div className="CategoryContainer">
       <h1>{status}</h1>
-      <button className="status-button" type="button" onClick={handleCheckStatus}>
+      <button className="statusButton" type="button" onClick={handleCheckStatus}>
         Check Status
       </button>
     </div>

@@ -5,8 +5,9 @@ import './Styles/Books.css';
 
 function Books() {
   return (
-    <div className="All-B">
+    <div className="all-books">
       <Book />
+      <div className="third-line" />
       <AddBook />
     </div>
   );
