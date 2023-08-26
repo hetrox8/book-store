@@ -266,18 +266,17 @@ form input::placeholder {
 
 .third-line {
   border: solid 2px #e8e8e8;
-    width: 74%;
-    height: 0.125rem;
+  width: 74%;
+  height: 0.125rem;
 }
 
 h3.book-title {
   text-transform: uppercase;
 }
+
 select.category-list {
   border: solid 1px #e8e8e8;
 }
-
-
 
 #circular-progressbar {
   width: 100%;
