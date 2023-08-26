@@ -6,8 +6,14 @@
   align-items: center;
 }
 
-.category-li {
-  color: #e8e8e8;
+.link {
+  color: #121212;
+}
+
+.link-2 {
+  color: #dadce1;
+   font-family: Montserrat;
+  font-size: 0.813rem;
 }
 
 .navbar ul {
@@ -28,7 +34,6 @@
 .navbar ul li a {
   text-decoration: none;
   font-size: 1rem;
-  color: #121212;
 }
 
 .book-store {

@@ -10,8 +10,8 @@ function Navbar() {
         <li className="link">
           <Link to="/">Books</Link>
         </li>
-        <li className="link">
-          <Link className="category-li" to="/Categories">Categories</Link>
+        <li className="link-2">
+          <Link className="link-2" to="/Categories">Categories</Link>
         </li>
       </ul>
       <div className="profile-container">
