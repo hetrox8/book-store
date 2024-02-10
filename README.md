@@ -34,10 +34,11 @@
 This project's main feature is for the client to perform mathematical calculations and to display random Math Quotes
 
 ## 🛠 Built With <a name="built-with"></a>
+
 - HTML
 - CSS
 - JAVASCRIPT
--React.js
+  -React.js
 
 ### Tech Stack <a name="tech-stack"></a>
 
@@ -65,8 +66,6 @@ This project's main feature is for the client to perform mathematical calculatio
 <p align="right">(<a href="#readme-top">back to top</a>)</p> -->
 
 ## 💻 Getting Started <a name="getting-started"></a>
-
-
 
 ### Prerequisites
 
@@ -122,7 +121,6 @@ Deploy this project on any web server
 - Twitter: [@twitterhandle](https://twitter.com/Asuleiman)
 - LinkedIn: [@LinkedIn](https://www.linkedin.com/suleimangacheru/)
 
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🔭 Future Features <a name="future-features"></a>
@@ -154,8 +152,6 @@ I would like to thank Microverse.
 
 ## 📝 License <a name="license"></a>
 
-
 This project is [MIT](./MIT.md) licensed.
-
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>

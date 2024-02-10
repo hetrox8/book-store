@@ -15,7 +15,11 @@ function Category() {
   return (
     <div className="Cat-container">
       <h1>{status}</h1>
-      <button className="status-button" type="button" onClick={handleCheckStatus}>
+      <button
+        className="status-button"
+        type="button"
+        onClick={handleCheckStatus}
+      >
         Check Status
       </button>
     </div>
