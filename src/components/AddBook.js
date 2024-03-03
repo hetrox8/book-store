@@ -1,57 +1,76 @@
-import React, { useState } from 'react';
+import { v4 as uuidv4 } from 'uuid';
+import { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { addBook } from '../redux/book/bookSlice';
-import './Styles/Books.css';
+import { createBook } from '../redux/books/bookSlice';
+import styles from '../styles/AddBook.module.css';
 
 function AddBook() {
   const [title, setTitle] = useState('');
   const [author, setAuthor] = useState('');
+  const [message, setMessage] = useState('');
+
   const dispatch = useDispatch();
 
   const handleTitleChange = (e) => {
     setTitle(e.target.value);
+    setMessage('');
   };
 
   const handleAuthorChange = (e) => {
     setAuthor(e.target.value);
+    setMessage('');
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (title && author) {
-      const newBook = {
-        item_id: Date.now(),
+    if (title.trim() && author.trim()) {
+      dispatch(createBook({
         title,
         author,
-        category: 'Some Category',
-      };
-      dispatch(addBook(newBook));
+        item_id: uuidv4(),
+        category: 'category',
+      }));
       setTitle('');
       setAuthor('');
+      setMessage('');
+    } else {
+      setMessage('Please add title and author');
     }
   };
 
   return (
-    <div className="BookForm">
-      <h3>Add New Book</h3>
-      <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          placeholder="Enter Book Name"
-          value={title}
-          onChange={handleTitleChange}
-        />
-        <input
-          type="text"
-          placeholder="Enter Author Name"
-          value={author}
-          onChange={handleAuthorChange}
-        />
-        <button className="AddBook" type="submit">
-          Add Book
-        </button>
+    <>
+      <form className={styles.add_book} onSubmit={handleSubmit}>
+        <fieldset>
+          <legend>add new book</legend>
+          <input
+            type="text"
+            placeholder="Add Title..."
+            value={title}
+            onChange={handleTitleChange}
+          />
+          <input
+            type="text"
+            placeholder="Add Author..."
+            value={author}
+            onChange={handleAuthorChange}
+          />
+          <select name="categories" id="categories" defaultValue="category">
+            <option value="category" disabled>Category</option>
+            <option value="action">Action</option>
+            <option value="economy">Economy</option>
+            <option value="science-fiction">Science Fiction</option>
+          </select>
+          <button
+            className={styles.btn}
+            type="submit"
+          >
+            add book
+          </button>
+        </fieldset>
       </form>
-    </div>
+      <span>{message}</span>
+    </>
   );
 }
 
