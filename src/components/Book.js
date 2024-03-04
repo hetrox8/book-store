@@ -1,9 +1,9 @@
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
-import { removeBook } from '../redux/books/bookSlice';
+import { removeBook } from '../redux/books/booksSlice';
 import styles from '../styles/Book.module.css';
 
-function Book({ book }) {
+const Book = ({ book }) => {
   const {
     title,
     author,
@@ -62,7 +62,7 @@ function Book({ book }) {
       </div>
     </li>
   );
-}
+};
 
 Book.propTypes = {
   book: PropTypes.objectOf(PropTypes.string).isRequired,

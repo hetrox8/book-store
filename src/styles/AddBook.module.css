@@ -1,6 +1,5 @@
-/* stylelint-disable font-family-name-quotes */
 form {
-  padding: 1.8rem 6.25rem 2.5rem;
+  padding: 1.8rem 6.25rem 2.5rem 6.25rem;
   background-color: #f5f6fa;
 }
 
@@ -28,7 +27,7 @@ input {
   padding: 0.813rem 1.063rem;
   border: solid 1px #e8e8e8;
   background-color: #fff;
-  font-family:sans-serif, 'Montserrat,';
+  font-family: 'Montserrat', sans-serif;
   font-size: 1rem;
   letter-spacing: -0.15px;
   margin-right: 2.125rem;
@@ -39,7 +38,7 @@ select {
   margin-right: 2.125rem;
   border: solid 1px #e8e8e8;
   color: #c4c4c4;
-  font-family: Montserrat, sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 1rem;
   line-height: 1em;
   letter-spacing: -0.15px;
@@ -47,7 +46,7 @@ select {
 }
 
 input::placeholder {
-  font-family: Montserrat, sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 1rem;
   line-height: 1em;
   letter-spacing: -0.15px;

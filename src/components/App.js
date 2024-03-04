@@ -9,16 +9,14 @@ import Layout from './Layout';
 import NotMatch from '../routes/NotMatch';
 import '../styles/App.css';
 
-function App() {
-  return (
-    <Routes>
-      <Route path="/" element={<Layout />}>
-        <Route index element={<Books />} />
-        <Route path="categories" element={<Categories />} />
-        <Route path="*" element={<NotMatch />} />
-      </Route>
-    </Routes>
-  );
-}
+const App = () => (
+  <Routes>
+    <Route path="/" element={<Layout />}>
+      <Route index element={<Books />} />
+      <Route path="categories" element={<Categories />} />
+      <Route path="*" element={<NotMatch />} />
+    </Route>
+  </Routes>
+);
 
 export default App;

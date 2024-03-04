@@ -4,7 +4,7 @@ import { useDispatch } from 'react-redux';
 import { createBook } from '../redux/books/bookSlice';
 import styles from '../styles/AddBook.module.css';
 
-function AddBook() {
+const AddBook = () => {
   const [title, setTitle] = useState('');
   const [author, setAuthor] = useState('');
   const [message, setMessage] = useState('');
@@ -72,6 +72,6 @@ function AddBook() {
       <span>{message}</span>
     </>
   );
-}
+};
 
 export default AddBook;

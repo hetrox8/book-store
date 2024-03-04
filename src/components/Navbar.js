@@ -8,25 +8,23 @@ const links = [
   { path: 'categories', text: 'Categories' },
 ];
 
-function Navbar() {
-  return (
-    <nav className="navbar">
-      <h1><NavLink to="/">Bookstore CMS</NavLink></h1>
-      <ul>
-        {links.map((link) => (
-          <li key={link.text}>
-            <NavLink to={link.path}>{link.text}</NavLink>
-          </li>
-        ))}
-      </ul>
-      <NavLink to="#" className="profile">
-        <BsFillPersonFill
-          color="#0290ff"
-          size="22px"
-        />
-      </NavLink>
-    </nav>
-  );
-}
+const Navbar = () => (
+  <nav className="navbar">
+    <h1><NavLink to="/">Bookstore CMS</NavLink></h1>
+    <ul>
+      {links.map((link) => (
+        <li key={link.text}>
+          <NavLink to={link.path}>{link.text}</NavLink>
+        </li>
+      ))}
+    </ul>
+    <NavLink to="#" className="profile">
+      <BsFillPersonFill
+        color="#0290ff"
+        size="22px"
+      />
+    </NavLink>
+  </nav>
+);
 
 export default Navbar;

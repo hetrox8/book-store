@@ -1,9 +1,9 @@
 import { useSelector, useDispatch } from 'react-redux';
 import { useEffect } from 'react';
-import { getBooks } from '../redux/books/bookSlice';
+import { getBooks } from '../redux/books/booksSlice';
 import Book from './Book';
 
-function BooksList() {
+const BooksList = () => {
   const dispatch = useDispatch();
   const { books, isLoading, error } = useSelector((store) => store.books);
 
@@ -36,6 +36,6 @@ function BooksList() {
     );
   }
   return <p>No books found!</p>;
-}
+};
 
 export default BooksList;
