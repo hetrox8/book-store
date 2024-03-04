@@ -1,6 +1,6 @@
 import { useSelector, useDispatch } from 'react-redux';
 import { useEffect } from 'react';
-import { getBooks } from '../redux/books/booksSlice';
+import { getBooks } from '../redux/books/bookSlice';
 import Book from './Book';
 
 const BooksList = () => {
