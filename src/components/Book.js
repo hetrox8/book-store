@@ -1,30 +1,71 @@
-import React from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { removeBook } from '../redux/book/bookSlice';
-import './Styles/Books.css';
+import PropTypes from 'prop-types';
+import { useDispatch } from 'react-redux';
+import { removeBook } from '../redux/books/bookSlice';
+import styles from '../styles/Book.module.css';
 
-function Book() {
+const Book = ({ book }) => {
+  const {
+    title,
+    author,
+    category,
+    id,
+  } = book;
   const dispatch = useDispatch();
-  const books = useSelector((state) => state.books.books);
 
   return (
-    <div className="Book-C">
-      {books.map((item) => (
-        <div className="Single-B" key={item.item_id}>
-          <h3>{item.title}</h3>
-          <p>{item.author}</p>
-          <p>{item.category}</p>
+    <li className={styles.book}>
+      <div className={styles.data}>
+        <h2>{title}</h2>
+        <h3>{author}</h3>
+        <h4>{category}</h4>
+      </div>
+      <div className={styles.actions}>
+        <button
+          className={styles.btn}
+          type="button"
+        >
+          Comment
+        </button>
+        <button
+          className={styles.btn}
+          type="button"
+          onClick={() => dispatch(removeBook(id))}
+        >
+          Remove
+        </button>
+        <button
+          className={styles.btn}
+          type="button"
+        >
+          Edit
+        </button>
+      </div>
+      <div className={styles.progress}>
+        <div className={styles.pr_chart}>
+          <div className={styles.circle}> </div>
+          <p>
+            <span className={styles.percentage}>64% </span>
+            <br />
+            <span>Completed</span>
+          </p>
+        </div>
+        <div className={styles.pr_current}>
+          <span>current chapter</span>
+          <h3>Chapter 3: &quot;A Lesson Learned&quot;</h3>
           <button
-            className="RemoveBook"
+            className={styles.btn}
             type="button"
-            onClick={() => dispatch(removeBook(item.item_id))}
           >
-            Remove
+            update progress
           </button>
         </div>
-      ))}
-    </div>
+      </div>
+    </li>
   );
-}
+};
+
+Book.propTypes = {
+  book: PropTypes.objectOf(PropTypes.string).isRequired,
+};
 
 export default Book;

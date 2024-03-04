@@ -1,21 +1,30 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import './Styles/Navbar.css';
+import { NavLink } from 'react-router-dom';
+import '../styles/App.css';
+import { BsFillPersonFill } from 'react-icons/bs';
 
-function Navbar() {
-  return (
-    <nav className="navbar">
-      <h1>BookStore</h1>
-      <ul>
-        <li>
-          <Link to="/">Books</Link>
+const links = [
+  { path: '/', text: 'Books' },
+  { path: 'categories', text: 'Categories' },
+];
+
+const Navbar = () => (
+  <nav className="navbar">
+    <h1><NavLink to="/">Bookstore CMS</NavLink></h1>
+    <ul>
+      {links.map((link) => (
+        <li key={link.text}>
+          <NavLink to={link.path}>{link.text}</NavLink>
         </li>
-        <li>
-          <Link to="/Categories">Categories</Link>
-        </li>
-      </ul>
-    </nav>
-  );
-}
+      ))}
+    </ul>
+    <NavLink to="#" className="profile">
+      <BsFillPersonFill
+        color="#0290ff"
+        size="22px"
+      />
+    </NavLink>
+  </nav>
+);
 
 export default Navbar;
